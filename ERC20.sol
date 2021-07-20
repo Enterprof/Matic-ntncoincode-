@@ -33,7 +33,7 @@ contract NTN is ERC20Interface, Math {
         name = "NTN";
         symbol = "NTN";
         decimals = 18;
-        _totalSupply = 100000000;
+        _totalSupply = 100000 * 10 ** uint256(decimals);
         balances[msg.sender] = _totalSupply;
         emit Transfer(address(0), msg.sender, _totalSupply);
     }
